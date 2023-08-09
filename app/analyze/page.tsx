@@ -1,4 +1,4 @@
-export default function Analyse() {
+export default function Analyze() {
     return (
         <div>
 
