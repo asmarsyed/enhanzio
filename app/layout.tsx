@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/navbar'
 import Header from './components/header'
+import AuthForm from './auth-form'
 
 import Home from './page'
 
@@ -26,6 +27,7 @@ export default function RootLayout({
     <body className="dark:bg-gray-900">
       <Header />
       <Navbar />
+      <AuthForm />
       {children}
     </body>
   </html>
