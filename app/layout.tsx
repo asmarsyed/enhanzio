@@ -6,6 +6,7 @@ import Header from './components/header'
 import AuthForm from './auth-form'
 
 import Home from './page'
+import Footer from './components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,10 +25,7 @@ export default function RootLayout({
     <head>
         <link rel='icon' href='Logo Enhanzio.png'/>
       </head>
-    <body className="dark:bg-gray-900">
-      <Header />
-      <Navbar />
-      <AuthForm />
+    <body className="bg-white">
       {children}
     </body>
   </html>
