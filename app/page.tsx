@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <Header />
       <div className="flex justify-center items-center">
-        <div className="w-[1300px] mt-[60px] flex flex-col justify-center items-center">
+        <div className="w-[1300px] mt-[80px] flex flex-col justify-center items-center">
           <div className="text-gray-800 m-4 text-[50px] font-bold text-center">
           Your Gateway to Operational Excellence
           </div>

@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
-        <link rel='icon' href='Logo Enhanzio.png'/>
+        <link rel='icon' href='/Logo Enhanzio.png'/>
       </head>
     <body className="bg-white">
       {children}
