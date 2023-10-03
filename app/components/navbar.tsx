@@ -1,6 +1,8 @@
 "use client"
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, createContext, useContext } from 'react';
 import Link from 'next/link'
+
+const NavbarContext = createContext({})
 
 export default function Navbar() {
 
@@ -9,7 +11,7 @@ export default function Navbar() {
 
 return (
     <>
-    <aside className={`h-screen border-r border-gray-200 ${expanded ? "w-56 transition-all ease-in-out" : "w-[88px] transition-all ease-in-out"}`}>
+    <aside className={`h-screen border-r border-gray-200 ${expanded ? "w-[222px] transition-all ease-in-out" : "w-[88px] transition-all ease-in-out"}`}>
         <nav>
             <div className="p-4 pb-2 flex justify-between items-center mb-2">
                 {expanded ?
