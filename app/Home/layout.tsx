@@ -11,12 +11,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <head>
-        </head>
-        <body className="bg-white">
-        <Navbar />
+      <head>
+      </head>
+      <body className="bg-white">
+        <main className="">
+          <div className="flex">
+          <Navbar />
           {children}
-        </body>
-  </html>
+          </div>
+        </main>
+      </body>
+    </html>
   )
 }

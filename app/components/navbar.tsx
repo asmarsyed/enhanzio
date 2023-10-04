@@ -10,8 +10,8 @@ export default function Navbar() {
 
 
 return (
-    <aside>
-    <aside className={`fixed h-screen border-r border-gray-200 ${expanded ? "w-[222px] transition-all ease-in-out" : "w-[86px] transition-all ease-in-out"}`}>
+    <>
+    <aside className={`h-screen border-r border-gray-200 ${expanded ? "w-[222px] transition-all ease-in-out" : "w-[86px] transition-all ease-in-out"}`}>
         <nav>
             <div className="p-4 pb-2 flex justify-between items-center mb-2">
                 {expanded ?
@@ -132,6 +132,6 @@ return (
             </ul>
         </nav>
     </aside>
-    </aside>
+    </>
 )
 }
