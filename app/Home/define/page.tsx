@@ -22,6 +22,7 @@ const Define = () => {
 
       <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
 
+
       <p className="text-gray-500 mt-4">
         2. Identifying what the customers want and serving priorities to their needs. That is what we call the Voice Of the Customer (VOC)
       </p>
@@ -29,6 +30,7 @@ const Define = () => {
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Voice Of the Customer (VOC)"/>
 
       <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      
 
       <p className="text-gray-500 mt-4">
         3. Defining the project objective. 
@@ -123,10 +125,10 @@ const Define = () => {
         </div>
 
         <div className="flex flex-col w-3/4 mt-4">
-        <input className="border border-gray-400 p-2" type="text" placeholder=""/>
-        <input className="border border-gray-400 p-2" type="text" placeholder=""/>
-        <input className="border border-gray-400 p-2" type="text" placeholder=""/>
-        <input className="border border-gray-400 p-2" type="text" placeholder=""/>
+        <input className="border border-gray-400 p-2" type="text" placeholder="Full name"/>
+        <input className="border border-gray-400 p-2" type="text" placeholder="Full name"/>
+        <input className="border border-gray-400 p-2" type="text" placeholder="Full name"/>
+        <input className="border border-gray-400 p-2" type="text" placeholder="Full name"/>
         </div>
       </div>
       <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">+Add more</button>
