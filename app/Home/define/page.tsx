@@ -11,7 +11,7 @@ const Define = () => {
         Define
       </h1>
       <p className="text-gray-500 mt-4">
-        In the realm of Lean Six Sigma improvement, the "Define" phase serves as your project&aposs launchpad. Here, you lay the groundwork for success. It&aposs the crucial first step on your journey towards process enhancement.
+        In the realm of Lean Six Sigma improvement, the &quotDefine&quot phase serves as your project&aposs launchpad. Here, you lay the groundwork for success. It&aposs the crucial first step on your journey towards process enhancement.
       </p>
 
       <p className="text-gray-500 mt-4">
