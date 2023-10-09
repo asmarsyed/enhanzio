@@ -8,7 +8,7 @@ export default function Control() {
                 Control
             </h1>
             <p className="text-gray-500 mt-4">
-               The 'Control' phase is all about sustainability. After improvements are in place, you establish controls and monitoring mechanisms to ensure that your process maintains its enhanced performance over time.
+               The &aposControl&apos phase is all about sustainability. After improvements are in place, you establish controls and monitoring mechanisms to ensure that your process maintains its enhanced performance over time.
             </p>
 
             <p className="text-gray-500 mt-4">
