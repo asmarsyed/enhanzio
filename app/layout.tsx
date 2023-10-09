@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Header from './components/header'
-import AuthForm from './auth-form'
 
 import Home from './page'
 
