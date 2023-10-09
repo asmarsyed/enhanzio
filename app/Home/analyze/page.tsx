@@ -8,7 +8,7 @@ export default function Analyze() {
                 Analyze
             </h1>
             <p className="text-gray-500 mt-4">
-                In the &aposAnalyze&apos phase, you dive deep into the data, searching for patterns, root causes, and insights that will illuminate the path to process improvement. It&aposs where you decode the intricacies of your operations.
+                In the &apos;Analyze&apos; phase, you dive deep into the data, searching for patterns, root causes, and insights that will illuminate the path to process improvement. It&apos;s where you decode the intricacies of your operations.
             </p>
 
             <p className="text-gray-500 mt-4">

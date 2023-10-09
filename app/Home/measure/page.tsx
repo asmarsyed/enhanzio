@@ -8,7 +8,7 @@ export default function Measure() {
                 Measure
             </h1>
             <p className="text-gray-500 mt-4">
-                In the realm of Lean Six Sigma improvement, the &quotDefine&quot phase serves as your project&aposs launchpad. Here, you lay the groundwork for success. It&aposs the crucial first step on your journey towards process enhancement.
+                In the realm of Lean Six Sigma improvement, the &apos;Define&apos; phase serves as your project&apos;s launchpad. Here, you lay the groundwork for success. It&apos;s the crucial first step on your journey towards process enhancement.
             </p>
 
             <p className="text-gray-500 mt-4">
@@ -20,7 +20,7 @@ export default function Measure() {
             <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
 
             <p className="text-gray-500 mt-4">
-                2. Prepare data collection : We&aposll need a collection plan. You will also need a measurement protocol. For the measurement protocol, you can use the 5W2H method (Why ? What ? Whese ? When ? Who ? How ? How much ?)
+                2. Prepare data collection : We&apos;ll need a collection plan. You will also need a measurement protocol. For the measurement protocol, you can use the 5W2H method (Why ? What ? Whese ? When ? Who ? How ? How much ?)
             </p>
 
             <div className="flex w-full">
@@ -54,7 +54,7 @@ export default function Measure() {
         <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
 
         <p className="text-gray-500 mt-4">
-                4. Collecting the datas : It&rsquos now time to collect the datas that you identified and prepare for.
+                4. Collecting the datas : It&apos;s now time to collect the datas that you identified and prepare for.
         </p>
 
         <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>

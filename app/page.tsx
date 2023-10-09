@@ -19,10 +19,15 @@ export default function Home() {
           </div>
       </div>
       <div className="flex w-full justify-center items-center mt-8">
-        <Link href="/Home" className="bg-orange-400 font-bold text-lg py-4 px-6 hover:bg-orange-500 rounded-md text-white drop-shadow-xl">
+        <Link href="/Home/define" className="bg-orange-400 font-bold text-lg py-4 px-6 hover:bg-orange-500 rounded-md text-white">
           GET STARTED
         </Link>
       </div>
+
+      <div className="flex w-full justify-center items-center mt-8">
+      <video className="md:px-6 w-full md:max-w-[1300px] flex justify-center items-center" src="/demodmaic.mp4" autoPlay loop muted />
+      </div>
+
       <Footer />
     </main>
   )

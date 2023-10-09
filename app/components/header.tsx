@@ -13,22 +13,24 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="flex">
-                    <a href="" className="text-gray mr-4">
+                    <Link href="" className="text-gray mr-4">
                         DMAIC
-                    </a>
-                    <a href="" className="text-gray mr-4">
+                    </Link>
+                    <Link href="" className="text-gray mr-4">
                         Testimonials
-                    </a>
-                    <a href="" className="text-gray mr-4">
+                    </Link>
+                    <Link href="" className="text-gray mr-4">
                         Demo
-                    </a>
+                    </Link>
                     <Link href="/pricing" className="text-gray mr-4">
                         Pricing
                     </Link>
-                    <a href="" className="text-gray mr-4">
+                    <Link href="" className="text-gray mr-4">
                         Login
-                    </a>
+                    </Link>
                 </div>
+
+                
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect, useCallback, useRef, createContext, useContext } from 'react';
 import Link from 'next/link'    
+import { link } from 'fs';
 
 const NavbarContext = createContext({})
 
@@ -17,7 +18,9 @@ return (
         <nav>
             <div className="p-4 pb-2 flex justify-between items-center mb-2">
                 {expanded ?
+                <Link href="/">
                 <img className="ml-2 h-6" src="/Enhanzio.png" alt="Logo Enhanzio" />
+                </Link>
                 : <p className="h-6"></p>
                 }       
                 <button onClick={() => setExpanded((curr) => !curr)} >
@@ -36,7 +39,7 @@ return (
             </div>
             <ul>
                 <Link href="/Home/planning">
-                    <li className={`pl-2 w-[205px] rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
                     <div className={`px-2 py-1 ${expanded ? "" : "transition-all ease-in-out hover:bg-gray-100 text-white rounded-md"}`}>
                     <svg className={`m-2 w-[20px] h-[24px] text-gray-500 ${expanded ? "" : ""}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v3m5-3v3m5-3v3M1 7h7m1.506 3.429 2.065 2.065M19 7h-2M2 3h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm6 13H6v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L8 16Z"/>
@@ -49,7 +52,7 @@ return (
                     </li>
                 </Link>
                 <Link href="/Home/dashboard">
-                    <li className={`pl-2 w-[205px] rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
                     <div className={`px-2 py-1 ${expanded ? "" : "hover:bg-gray-100 rounded-md"}`}>
                     <svg className={`m-2 w-[20px] h-[24px] text-gray-500 ${expanded ? "" : ""}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1v14h16m0-9-3-2-3 5-3-2-3 4"/>
@@ -61,8 +64,21 @@ return (
                     }
                     </li>
                 </Link>
+                <Link href="/Home/kanban">
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <div className={`px-2 py-1 ${expanded ? "" : "hover:bg-gray-100 rounded-md"}`}>
+                    <svg className={`m-2 w-[20px] h-[24px] text-gray-500 ${expanded ? "" : ""}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3V0H2Zm16 0h-3v16h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 0H7v16h6V0Z"/>
+                    </svg>
+                    </div>
+                    { expanded ?
+                    <p className="flex justify-center items-center text-gray-500 ml-2">Kanban</p>
+                    : <p></p>
+                    }
+                    </li>
+                </Link>
                 <Link href="/Home/define">
-                    <li className={`pl-2 w-[205px] rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
                     <div className={`px-2 py-1 ${expanded ? "" : "hover:bg-gray-100 rounded-md"}`}>
                         <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
                             D
@@ -76,7 +92,7 @@ return (
                     </li>
                 </Link>
                 <Link href="/Home/measure">
-                    <li className={`pl-2 w-[205px] rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
                     <div className={`px-2 py-1 ${expanded ? "" : "hover:bg-gray-100 rounded-md"}`}>
                         <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
                             M
@@ -90,7 +106,7 @@ return (
                     </li>
                 </Link>
                 <Link href="/Home/analyze">
-                    <li className={`pl-2 w-[205px] rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
                     <div className={`px-2 py-1 ${expanded ? "" : "hover:bg-gray-100 rounded-md"}`}>
                         <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
                             A
@@ -104,7 +120,7 @@ return (
                     </li>
                 </Link>
                 <Link href="/Home/improve">
-                    <li className={`pl-2 w-[205px] rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
                     <div className={`px-2 py-1 ${expanded ? "" : "hover:bg-gray-100 rounded-md"}`}>
                         <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
                             I
@@ -118,7 +134,7 @@ return (
                     </li>
                 </Link>
                 <Link href="/Home/control">
-                    <li className={`pl-2 w-[205px] rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
+                    <li className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${expanded ? "hover:bg-gray-100 " : "w-0"}`}>
                     <div className={`px-2 py-1 ${expanded ? "" : "hover:bg-gray-100 rounded-md"}`}>
                         <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
                             C

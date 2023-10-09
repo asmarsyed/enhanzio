@@ -8,7 +8,7 @@ export default function Improve() {
                 Improve
             </h1>
             <p className="text-gray-500 mt-4">
-                The &aposImprove&apos phase is where innovation and transformation come to life. Here, you develop and implement solutions, making tangible changes to your process to achieve better outcomes.
+                The &apos;Improve&apos; phase is where innovation and transformation come to life. Here, you develop and implement solutions, making tangible changes to your process to achieve better outcomes.
             </p>
 
             <p className="text-gray-500 mt-4">
