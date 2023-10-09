@@ -58,9 +58,6 @@ export default function Footer() {
                 <p className="w-full md:max-w-[1300px] mx-auto flex text-sm leading-5 text-gray-400 mt-0">
                     © 2023 Enhanzio. All rights reserved.
                 </p>
-                <div>
-                    d
-                </div>
             </div>
             </div>
 

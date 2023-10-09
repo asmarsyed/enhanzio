@@ -1,10 +1,14 @@
 "use client"
 
 import React from 'react'
+import { useState } from 'react'
 import Link from 'next/dist/client/link'
 
 
 const Define = () => {
+
+  const [next1, setNext1] = useState(true)
+
   return (
     <div className="mt-6 mx-6">
       <h1 className="text-xl font-bold">
@@ -20,16 +24,26 @@ const Define = () => {
 
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Define the problem"/>
 
-      <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
 
+      <div className="flex">
+      <button className="transition-all ease-in-out mt-4 mr-4 border bg-orange-500 text-white rounded-xl p-2 hover:bg-orange-700">Previous step</button>
 
+      <button onClick={() => setNext1((curr) => !curr)} className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      </div>
+
+      {next1 ?
+
+      <p></p>
+      :
+      <>
       <p className="text-gray-500 mt-4">
-        2. Identifying what the customers want and serving priorities to their needs. That is what we call the Voice Of the Customer (VOC)
+            2. Identifying what the customers want and serving priorities to their needs. That is what we call the Voice Of the Customer (VOC)
       </p>
+      
+      <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Voice Of the Customer (VOC)" /><button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      </>
 
-      <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Voice Of the Customer (VOC)"/>
-
-      <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      }
       
 
       <p className="text-gray-500 mt-4">
