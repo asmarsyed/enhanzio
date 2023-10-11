@@ -5,11 +5,11 @@ import Image from 'next/image'
 
 export default function Header() {
     return (
-        <div className="fixed top-0 flex justify-center items-center w-full bg-white h-16 border-b border-gray-300">
-            <div className="fixed top-0 inline-flex items-center place-content-between border-b border-gray-300 w-full md:max-w-[1300px] bg-white h-16">
+        <div className="fixed top-0 flex justify-center items-center w-full bg-white h-20 border-b border-gray-300">
+            <div className="fixed top-0 inline-flex items-center place-content-between border-b border-gray-300 w-full md:max-w-[1300px] bg-white h-20">
                 <div className="flex h-12 items-center w-[1300px]">
                     <Link href="/">
-                    <img className="h-8 ml-4" src="/Enhanzio.png" alt="Logo" />
+                    <img className="h-7 ml-6" src="/Enhanzio.png" alt="Logo" />
                     </Link>
                 </div>
                 <div className="flex">

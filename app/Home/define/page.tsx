@@ -7,52 +7,75 @@ import Link from 'next/dist/client/link'
 
 const Define = () => {
 
-  const [next1, setNext1] = useState(true)
+  const [next1, setNext1] = useState(1)
+
+  const handleNext = () => {
+
+    if (next1 >= 1 && next1 < 7) {
+    setNext1(next1 + 1)
+
+    } else if (next1 > 7) {
+      setNext1(1)
+    } else if (next1 == 7) {
+      setNext1(1)
+    }
+  }
+
+  const handlePrevious = () => {
+
+    if (next1 > 1 && next1 <= 7) {
+    setNext1(next1 - 1)
+
+    } else if (next1 < 1) {
+      setNext1(7) 
+    } else if (next1 == 1) {
+      setNext1(7)
+    }
+  }
+
+  console.log(next1)
 
   return (
-    <div className="mt-6 mx-6">
+    <div className="mt-6 mx-6 w-full">
       <h1 className="text-xl font-bold">
         Define
       </h1>
+      <div className="h-[80%]">
+      { next1 == 1 ? (
+      <>
       <p className="text-gray-500 mt-4">
         In the realm of Lean Six Sigma improvement, the &apos;Define&apos; phase serves as your project&apos;s launchpad. Here, you lay the groundwork for success. It&apos;s the crucial first step on your journey towards process enhancement.
       </p>
 
       <p className="text-gray-500 mt-4">
         1. Defining the problem : What challenge or opportunity do you seek to address? It&apos;s about pinpointing the core problem that needs solving or the process that requires optimization.
-      </p>
 
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Define the problem"/>
-
-
-      <div className="flex">
-      <button className="transition-all ease-in-out mt-4 mr-4 border bg-orange-500 text-white rounded-xl p-2 hover:bg-orange-700">Previous step</button>
-
-      <button onClick={() => setNext1((curr) => !curr)} className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
-      </div>
-
-      {next1 ?
-
-      <p></p>
-      :
+      </p>
+      </>
+      ) : next1 == 2 ? (
       <>
       <p className="text-gray-500 mt-4">
-            2. Identifying what the customers want and serving priorities to their needs. That is what we call the Voice Of the Customer (VOC)
+            2. Identifying what the customers want and serving priorities to their needs. That is what we call the Voice Of the Customer
       </p>
       
-      <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Voice Of the Customer (VOC)" /><button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Voice Of the Customer (VOC)" />
+
       </>
 
-      }
-      
+      ) : next1 == 3 ? (
 
-      <p className="text-gray-500 mt-4">
+      <>
+      <p className="text-gray-500 mt-4 w-full">
         3. Defining the project objective. 
       </p>
 
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Project objective"/>
+      </>
 
-      <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      ) : next1 == 4 ? (
+
+      <>
 
       <p className="text-gray-500 mt-4">
         4. To define the project&apos;s scope, this step involves using the SIPOC tool, which stands for Supplier, Input, Process, Output, Customer.  SIPOC is a visual framework commonly used in process improvement, breaking down a process into key components for a high-level understanding.
@@ -102,8 +125,6 @@ const Define = () => {
 
       <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">+Add more</button>
 
-      <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
-
       <p className="text-gray-500 mt-4">
         Define now the scope of the project
       </p>
@@ -112,8 +133,12 @@ const Define = () => {
 
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Out Scope"/>
 
-      <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      </>
 
+      ) : next1 == 5 ? (
+
+      <>
+      
       <p className="text-gray-500 mt-4">
         5. Defining the business case, which involves specifying the budget and calculating the potential cost savings achievable through this project. This financial aspect clarifies the project&apos;s economic impact and feasibility.
       </p>
@@ -123,9 +148,12 @@ const Define = () => {
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Savings"/>
 
       <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">+Add more</button>
+      
+      </>
 
-      <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      ) : next1 == 6 ? (
 
+      <>
       <p className="text-gray-500 mt-4">
         6. Defining the team for your DMAIC project :
       </p>
@@ -146,8 +174,12 @@ const Define = () => {
         </div>
       </div>
       <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">+Add more</button>
+      
+      </>
 
-      <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      ) : (
+
+      <>
 
       <p className="text-gray-500 mt-4">
         The last step of the Define phase is to plan your project.
@@ -159,7 +191,17 @@ const Define = () => {
         <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400 mb-8">Plan the project</button>
       </Link>
 
+      </>
 
+      )}
+      </div>
+
+
+      <div className="flex justify-center">
+      <button onClick={handlePrevious} className="transition-all ease-in-out mt-4 mr-4 border bg-orange-500 text-white rounded-xl p-2 hover:bg-orange-700">Previous step</button>
+
+      <button onClick={handleNext} className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+      </div>
 
     </div>
   )

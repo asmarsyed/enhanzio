@@ -15,11 +15,9 @@ export default function RootLayout({
       <head>
       </head>
       <body className="bg-white">
-        <main className="">
-          <div className="flex">
+        <main className="flex">
           <Navbar />
           {children}
-          </div>
         </main>
       </body>
     </html>
