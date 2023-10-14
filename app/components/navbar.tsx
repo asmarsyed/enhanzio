@@ -16,10 +16,10 @@ return (
 
     <aside className={`fixed h-screen border-r border-gray-200 ${expanded ? "w-[222px] transition-all ease-in-out" : "w-[86px] transition-all ease-in-out"}`}>
         <nav>
-            <div className="p-4 pb-2 flex justify-between items-center mb-2">
+            <div className="p-4 pb-2 flex justify-between items-center mb-2 h-14">
                 {expanded ?
                 <Link href="/">
-                <img className="ml-2 h-6" src="/Enhanzio.png" alt="Logo Enhanzio" />
+                <img className="ml-2 h-9" src="/Enhanzio.png" alt="Logo Enhanzio" />
                 </Link>
                 : <p className="h-6"></p>
                 }       

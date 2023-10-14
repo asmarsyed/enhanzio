@@ -7,75 +7,94 @@ import Link from 'next/dist/client/link'
 
 const Define = () => {
 
-  const [next1, setNext1] = useState(1)
+  const [expanded1, setExpanded1] = useState(1)
+  const [submit1, setSubmit1] = useState(1)
 
-  const handleNext = () => {
-
-    if (next1 >= 1 && next1 < 7) {
-    setNext1(next1 + 1)
-
-    } else if (next1 > 7) {
-      setNext1(1)
-    } else if (next1 == 7) {
-      setNext1(1)
-    }
-  }
-
-  const handlePrevious = () => {
-
-    if (next1 > 1 && next1 <= 7) {
-    setNext1(next1 - 1)
-
-    } else if (next1 < 1) {
-      setNext1(7) 
-    } else if (next1 == 1) {
-      setNext1(7)
-    }
-  }
-
-  console.log(next1)
+  
 
   return (
-    <div className="mt-6 mx-6 w-full">
+    <div className="mt-6 mx-6 w-full flex justify-center transition-all">
+      <div className="w-full xl:w-[90%]">
       <h1 className="text-xl font-bold">
         Define
       </h1>
-      <div className="h-[80%]">
-      { next1 == 1 ? (
-      <>
       <p className="text-gray-500 mt-4">
         In the realm of Lean Six Sigma improvement, the &apos;Define&apos; phase serves as your project&apos;s launchpad. Here, you lay the groundwork for success. It&apos;s the crucial first step on your journey towards process enhancement.
       </p>
 
+
+      <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+        <p className="h-full flex justify-center items-center py-2 px-5">Defining the problem</p>
+        <button onClick={() => { setSubmit1(1); setExpanded1(2) }} className={`text-white py-2 px-10 rounded-md ${expanded1 === 1 ? "bg-indigo-900 hover:bg-indigo-700 transition-colors" : expanded1 === 2 ? "bg-orange-800 transition-colors" : "bg-green-800 hover:bg-green-600 transition-colors"}}`}>
+          { expanded1 === 1 ?
+          <p>Start</p>
+          : expanded1 === 2 ?
+          <p>In progress</p>
+          :
+          <p>Done</p>
+          }
+        </button>
+      </div>
+
+      <div id="ReactCollapse--collapse" className={`mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md  ${submit1 === 1 ? "transition ease-in-out delay-150" : "transition-all hidden"} ${expanded1 === 1 ? "hidden transition-opacity duration-500 ease-in-out opacity-0" : "transition-opacity duration-500 ease-in-out opacity-100"}`}>
+
+
       <p className="text-gray-500 mt-4">
         1. Defining the problem : What challenge or opportunity do you seek to address? It&apos;s about pinpointing the core problem that needs solving or the process that requires optimization.
 
-      <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Define the problem"/>
+      <input className="w-full mt-4 border border-gray-400 rounded-md p-2 shadow-md" type="text" placeholder="Define the problem"/>
       </p>
-      </>
-      ) : next1 == 2 ? (
-      <>
+
+      <button onClick={() => {
+        setSubmit1(2);
+        setExpanded1(3);
+      }} className="w-full text-center bg-indigo-900 hover:bg-indigo-700 p-2 rounded-md mb-2 mt-6 text-white">Submit</button>
+
+
+      </div>
+
+      <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+        <p className="h-full flex justify-center items-center py-2 px-5">Voice Of the Customer</p>
+        <button className="bg-indigo-900 text-white py-2 px-10 rounded-md ">Start</button>
+      </div>
+
+      <div className="mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md hidden">
+
       <p className="text-gray-500 mt-4">
-            2. Identifying what the customers want and serving priorities to their needs. That is what we call the Voice Of the Customer
+        2. Identifying what the customers want and serving priorities to their needs. That is what we call the Voice Of the Customer
+
+      <input className="w-full mt-4 border border-gray-400 rounded-md p-2 shadow-md" type="text" placeholder="Voice Of the Customer (VOC)"/>
       </p>
-      
-      <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Voice Of the Customer (VOC)" />
 
-      </>
+      <button className="w-full text-center bg-indigo-900 p-2 rounded-md mb-2 mt-6 text-white">Submit</button>
 
-      ) : next1 == 3 ? (
+      </div>
 
-      <>
-      <p className="text-gray-500 mt-4 w-full">
+
+      <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+        <p className="h-full flex justify-center items-center py-2 px-5">Defining the project objective</p>
+        <button className="bg-indigo-900 text-white py-2 px-10 rounded-md ">Start</button>
+      </div>
+
+      <div className="mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md hidden">
+
+      <p className="text-gray-500 mt-4">
         3. Defining the project objective. 
+
+      <input className="w-full mt-4 border border-gray-400 rounded-md p-2 shadow-md" type="text" placeholder="Project objective"/>
       </p>
 
-      <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Project objective"/>
-      </>
+      <button className="w-full text-center bg-indigo-900 p-2 rounded-md mb-2 mt-6 text-white">Submit</button>
 
-      ) : next1 == 4 ? (
+      </div>
 
-      <>
+
+      <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+        <p className="h-full flex justify-center items-center py-2 px-5">Project scope</p>
+        <button className="bg-indigo-900 text-white py-2 px-10 rounded-md ">Start</button>
+      </div>
+
+      <div className="mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md hidden">
 
       <p className="text-gray-500 mt-4">
         4. To define the project&apos;s scope, this step involves using the SIPOC tool, which stands for Supplier, Input, Process, Output, Customer.  SIPOC is a visual framework commonly used in process improvement, breaking down a process into key components for a high-level understanding.
@@ -133,31 +152,43 @@ const Define = () => {
 
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Out Scope"/>
 
-      </>
+      <button className="w-full text-center bg-indigo-900 p-2 rounded-md mb-2 mt-6 text-white">Submit</button>
 
-      ) : next1 == 5 ? (
+      </div>
 
-      <>
       
+      <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+        <p className="h-full flex justify-center items-center py-2 px-5">Business case</p>
+        <button className="bg-indigo-900 text-white py-2 px-10 rounded-md ">Start</button>
+      </div>
+
+      <div className="mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md hidden">
+
       <p className="text-gray-500 mt-4">
         5. Defining the business case, which involves specifying the budget and calculating the potential cost savings achievable through this project. This financial aspect clarifies the project&apos;s economic impact and feasibility.
       </p>
-
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Budget"/>
 
       <input className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md" type="text" placeholder="Savings"/>
 
       <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">+Add more</button>
-      
-      </>
 
-      ) : next1 == 6 ? (
+      <button className="w-full text-center bg-indigo-900 p-2 rounded-md mb-2 mt-6 text-white">Submit</button>
 
-      <>
+      </div>
+
+
+      <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+        <p className="h-full flex justify-center items-center py-2 px-5">Project team</p>
+        <button className="bg-indigo-900 text-white py-2 px-10 rounded-md ">Start</button>
+      </div>
+
+      <div className="mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md hidden">
+
       <p className="text-gray-500 mt-4">
         6. Defining the team for your DMAIC project :
       </p>
-
+      
       <div className="flex w-full">
         <div className="w-1/4 mt-4">
           <div className="p-2 border border-gray-400 ">Team leader</div>
@@ -174,36 +205,36 @@ const Define = () => {
         </div>
       </div>
       <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">+Add more</button>
+
+      <button className="w-full text-center bg-indigo-900 p-2 rounded-md mb-2 mt-6 text-white">Submit</button>
+
+      </div>
       
-      </>
 
-      ) : (
 
-      <>
+      <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+        <p className="h-full flex justify-center items-center py-2 px-5">Plan</p>
+        <button className="bg-indigo-900 text-white py-2 px-10 rounded-md ">Start</button>
+      </div>
+
+      <div className="mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md hidden">
 
       <p className="text-gray-500 mt-4">
-        The last step of the Define phase is to plan your project.
+      The last step of the Define phase is to plan your project.
       </p>
-
       
-
       <Link href="/Home/planning">
         <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400 mb-8">Plan the project</button>
       </Link>
 
-      </>
+      <button className="w-full text-center bg-indigo-900 p-2 rounded-md mb-2 mt-6 text-white">Submit</button>
 
-      )}
       </div>
 
-
-      <div className="flex justify-center">
-      <button onClick={handlePrevious} className="transition-all ease-in-out mt-4 mr-4 border bg-orange-500 text-white rounded-xl p-2 hover:bg-orange-700">Previous step</button>
-
-      <button onClick={handleNext} className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
       </div>
 
     </div>
+
   )
 }
 

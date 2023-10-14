@@ -9,7 +9,7 @@ export default function Header() {
             <div className="fixed top-0 inline-flex items-center place-content-between border-b border-gray-300 w-full md:max-w-[1300px] bg-white h-20">
                 <div className="flex h-12 items-center w-[1300px]">
                     <Link href="/">
-                    <img className="h-7 ml-6" src="/Enhanzio.png" alt="Logo" />
+                    <img className="h-10 ml-6" src="/Enhanzio.png" alt="Logo" />
                     </Link>
                 </div>
                 <div className="flex">
