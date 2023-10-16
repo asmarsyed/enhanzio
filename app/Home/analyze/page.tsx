@@ -1,45 +1,361 @@
-"use client"
-import Navbar from "@/app/components/navbar"
+"use client";
+import Navbar from "@/app/components/navbar";
+import { useState, useRef } from "react";
+import Link from "next/dist/client/link";
 
 export default function Analyze() {
-    return (
-        <div className="mt-6 mx-6">
-            <h1 className="text-xl font-bold">
-                Analyze
-            </h1>
-            <p className="text-gray-500 mt-4">
-                In the &apos;Analyze&apos; phase, you dive deep into the data, searching for patterns, root causes, and insights that will illuminate the path to process improvement. It&apos;s where you decode the intricacies of your operations.
-            </p>
+  const [expanded1, setExpanded1] = useState(1);
+  const [submit1, setSubmit1] = useState(1);
+  const [expanded2, setExpanded2] = useState(1);
+  const [submit2, setSubmit2] = useState(1);
 
-            <p className="text-gray-500 mt-4">
-                1. Graphic analyses : The aim of this stage is to carry out studies on the data identified in the previous phase using tools such as Pareto, Histogram, Scatter plot, Dot plot, etc.
-            </p>
+  const [expanded3, setExpanded3] = useState(1);
+  const [submit3, setSubmit3] = useState(1);
 
-            <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+  const [expanded4, setExpanded4] = useState(1);
+  const [submit4, setSubmit4] = useState(1);
 
-            <p className="text-gray-500 mt-4">
-                2. Verify statistically : This step aim to correct the graphic analysis. 
-            </p>
+  const [expanded5, setExpanded5] = useState(1);
+  const [submit5, setSubmit5] = useState(1);
 
-            <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+  const [expanded6, setExpanded6] = useState(1);
+  const [submit6, setSubmit6] = useState(1);
 
-            <p className="text-gray-500 mt-4">
-                3. Finding the root causes : For this step, 5 WHYS tool and Ishikawa can be used for that.
-            </p>
+  const [expanded7, setExpanded7] = useState(1);
+  const [submit7, setSubmit7] = useState(1);
 
-            <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+  const reponseRef = useRef();
 
-            <p className="text-gray-500 mt-4">
-                4. Validate causes
-            </p>
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setSubmit1(2);
+    setExpanded1(3);
+    const data = new FormData(e.target);
+    console.log(Object.fromEntries(data.entries()));
+  };
 
-            <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+  return (
+    <div className="mt-6 mx-6 w-full flex justify-center transition-all">
+      <div className="w-full xl:w-[90%]">
+        <h1 className="text-xl font-bold">Analyze</h1>
+        <p className="text-gray-500 mt-4">
+          In the &apos;Analyze&apos; phase, you dive deep into the data,
+          searching for patterns, root causes, and insights that will illuminate
+          the path to process improvement. It&apos;s where you decode the
+          intricacies of your operations.
+        </p>
 
-            <p className="text-gray-500 mt-4">
-                5. End-of-phase review
-            </p>
-
-            <button className="transition-all ease-in-out mt-4 border bg-blue-500 text-white rounded-xl p-2 hover:bg-blue-700">Next step</button>
+        <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
+          <p className="h-full flex justify-center items-center py-2 px-5">
+            Graphic analyzes
+          </p>
+          <button
+            onClick={() => {
+              setSubmit1(1);
+              setExpanded1(2);
+            }}
+            className={`text-white py-2 px-10 rounded-md ${
+              expanded1 === 1
+                ? "bg-indigo-900 hover:bg-indigo-700 transition-colors"
+                : expanded1 === 2
+                ? "bg-orange-800 transition-colors"
+                : "bg-green-800 hover:bg-green-600 transition-colors"
+            }}`}
+          >
+            {expanded1 === 1 ? (
+              <p>Start</p>
+            ) : expanded1 === 2 ? (
+              <p>In progress</p>
+            ) : (
+              <p>Done</p>
+            )}
+          </button>
         </div>
-    )
+
+        <div
+          className={`mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md  ${
+            submit1 === 1
+              ? "transition ease-in-out delay-150"
+              : "transition-all hidden"
+          } ${
+            expanded1 === 1
+              ? "hidden transition-opacity duration-500 ease-in-out opacity-0"
+              : "transition-opacity duration-500 ease-in-out opacity-100"
+          }`}
+        >
+          <p className="text-gray-500 mt-4">
+            1. Graphic analyzes : The aim of this stage is to carry out studies
+            on the data identified in the previous phase using tools such as
+            Pareto, Histogram, Scatter plot, Dot plot, etc.
+          </p>
+
+          <form onSubmit={handleSubmit}>
+            <button
+              className={`w-full text-center bg-indigo-900 hover:bg-indigo-700 p-2 rounded-md mb-2 mt-6 text-white`}
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div
+          className={`flex justify-between w-full shadow-xl  p-2 rounded-md mt-4 ${
+            expanded1 === 3 ? "bg-white transition-colors" : "bg-gray-400"
+          } `}
+        >
+          <p
+            className={`h-full flex justify-center items-center py-2 px-5 ${
+              expanded1 === 3 ? "" : "text-gray-500"
+            } `}
+          >
+            Verify statistically
+          </p>
+
+          {expanded1 === 3 ? (
+            <button
+              onClick={() => {
+                setSubmit2(1);
+                setExpanded2(2);
+              }}
+              className={`text-white py-2 px-10 rounded-md ${
+                expanded2 === 1
+                  ? "bg-indigo-900 hover:bg-indigo-700 transition-colors"
+                  : expanded2 === 2
+                  ? "bg-orange-800 transition-colors"
+                  : "bg-green-800 hover:bg-green-600 transition-colors"
+              }}`}
+            >
+              {expanded2 === 1 ? (
+                <p>Start</p>
+              ) : expanded2 === 2 ? (
+                <p>In progress</p>
+              ) : (
+                <p>Done</p>
+              )}
+            </button>
+          ) : (
+            <p></p>
+          )}
+        </div>
+
+        <div
+          className={`mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md  ${
+            submit2 === 1
+              ? "transition ease-in-out delay-150"
+              : "transition-all hidden"
+          } ${
+            expanded2 === 1
+              ? "hidden transition-opacity duration-500 ease-in-out opacity-0"
+              : "transition-opacity duration-500 ease-in-out opacity-100"
+          }`}
+        >
+          <p className="text-gray-500 mt-4">
+            2. Verify statistically : This step aim to correct the graphic
+            analysis.
+          </p>
+
+          <button
+            onClick={() => {
+              setSubmit2(2);
+              setExpanded2(3);
+            }}
+            className={`w-full text-center bg-indigo-900 hover:bg-indigo-700 p-2 rounded-md mb-2 mt-6 text-white`}
+          >
+            Submit
+          </button>
+        </div>
+
+        <div
+          className={`flex justify-between w-full shadow-xl  p-2 rounded-md mt-4 ${
+            expanded2 === 3 ? "bg-white transition-colors" : "bg-gray-400"
+          } `}
+        >
+          <p
+            className={`h-full flex justify-center items-center py-2 px-5 ${
+              expanded2 === 3 ? "" : "text-gray-500"
+            } `}
+          >
+            Finding the root causes
+          </p>
+
+          {expanded2 === 3 ? (
+            <button
+              onClick={() => {
+                setSubmit3(1);
+                setExpanded3(2);
+              }}
+              className={`text-white py-2 px-10 rounded-md ${
+                expanded3 === 1
+                  ? "bg-indigo-900 hover:bg-indigo-700 transition-colors"
+                  : expanded3 === 2
+                  ? "bg-orange-800 transition-colors"
+                  : "bg-green-800 hover:bg-green-600 transition-colors"
+              }}`}
+            >
+              {expanded3 === 1 ? (
+                <p>Start</p>
+              ) : expanded3 === 2 ? (
+                <p>In progress</p>
+              ) : (
+                <p>Done</p>
+              )}
+            </button>
+          ) : (
+            <p></p>
+          )}
+        </div>
+
+        <div
+          className={`mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md  ${
+            submit3 === 1
+              ? "transition ease-in-out delay-150"
+              : "transition-all hidden"
+          } ${
+            expanded3 === 1
+              ? "hidden transition-opacity duration-500 ease-in-out opacity-0"
+              : "transition-opacity duration-500 ease-in-out opacity-100"
+          }`}
+        >
+          <p className="text-gray-500 mt-4">
+            3. Finding the root causes : For this step, 5 WHYS tool and Ishikawa
+            can be used for that.
+          </p>
+
+          <button
+            onClick={() => {
+              setSubmit3(2);
+              setExpanded3(3);
+            }}
+            className={`w-full text-center bg-indigo-900 hover:bg-indigo-700 p-2 rounded-md mb-2 mt-6 text-white`}
+          >
+            Submit
+          </button>
+        </div>
+
+        <div
+          className={`flex justify-between w-full shadow-xl  p-2 rounded-md mt-4 ${
+            expanded3 === 3 ? "bg-white transition-colors" : "bg-gray-400"
+          } `}
+        >
+          <p
+            className={`h-full flex justify-center items-center py-2 px-5 ${
+              expanded3 === 3 ? "" : "text-gray-500"
+            } `}
+          >
+            Validate causes
+          </p>
+
+          {expanded3 === 3 ? (
+            <button
+              onClick={() => {
+                setSubmit4(1);
+                setExpanded4(2);
+              }}
+              className={`text-white py-2 px-10 rounded-md ${
+                expanded4 === 1
+                  ? "bg-indigo-900 hover:bg-indigo-700 transition-colors"
+                  : expanded4 === 2
+                  ? "bg-orange-800 transition-colors"
+                  : "bg-green-800 hover:bg-green-600 transition-colors"
+              }}`}
+            >
+              {expanded4 === 1 ? (
+                <p>Start</p>
+              ) : expanded4 === 2 ? (
+                <p>In progress</p>
+              ) : (
+                <p>Done</p>
+              )}
+            </button>
+          ) : (
+            <p></p>
+          )}
+        </div>
+
+        <div
+          className={`mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md  ${
+            submit4 === 1
+              ? "transition ease-in-out delay-150"
+              : "transition-all hidden"
+          } ${
+            expanded4 === 1
+              ? "hidden transition-opacity duration-500 ease-in-out opacity-0"
+              : "transition-opacity duration-500 ease-in-out opacity-100"
+          }`}
+        >
+          <p className="text-gray-500 mt-4">4. Validate causes</p>
+
+          <button
+            onClick={() => {
+              setSubmit4(2);
+              setExpanded4(3);
+            }}
+            className={`w-full text-center bg-indigo-900 hover:bg-indigo-700 p-2 rounded-md mb-2 mt-6 text-white`}
+          >
+            Submit
+          </button>
+        </div>
+
+        <div
+          className={`flex justify-between w-full shadow-xl  p-2 rounded-md mt-4 ${
+            expanded4 === 3 ? "bg-white transition-colors" : "bg-gray-400"
+          } `}
+        >
+          <p
+            className={`h-full flex justify-center items-center py-2 px-5 ${
+              expanded4 === 3 ? "" : "text-gray-500"
+            } `}
+          >
+            End-of-phase review
+          </p>
+
+          {expanded4 === 3 ? (
+            <button
+              onClick={() => {
+                setSubmit5(1);
+                setExpanded5(2);
+              }}
+              className={`text-white py-2 px-10 rounded-md ${
+                expanded5 === 1
+                  ? "bg-indigo-900 hover:bg-indigo-700 transition-colors"
+                  : expanded5 === 2
+                  ? "bg-orange-800 transition-colors"
+                  : "bg-green-800 hover:bg-green-600 transition-colors"
+              }}`}
+            >
+              {expanded5 === 1 ? (
+                <p>Start</p>
+              ) : expanded5 === 2 ? (
+                <p>In progress</p>
+              ) : (
+                <p>Done</p>
+              )}
+            </button>
+          ) : (
+            <p></p>
+          )}
+        </div>
+
+        <div
+          className={`mt-2 w-full shadow-xl bg-white py-2 px-7 rounded-md  ${
+            submit5 === 1
+              ? "transition ease-in-out delay-150"
+              : "transition-all hidden"
+          } ${
+            expanded5 === 1
+              ? "hidden transition-opacity duration-500 ease-in-out opacity-0"
+              : "transition-opacity duration-500 ease-in-out opacity-100"
+          }`}
+        >
+          <p className="text-gray-500 mt-4">5. End-of-phase review</p>
+
+          <Link href="/Home/improve">
+            <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400 mb-8">
+              Improve phase
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
