@@ -3,6 +3,8 @@
 import React from "react";
 import { useState, useRef } from "react";
 import Link from "next/dist/client/link";
+import steps from "@/app/components/steps";
+import Steps from "@/app/components/steps";
 
 const Define = () => {
   const [expanded1, setExpanded1] = useState(1);
@@ -36,9 +38,7 @@ const Define = () => {
     console.log(Object.fromEntries(data.entries()));
   };
 
-  const handleMoreSipoc = () => {
-    
-  }
+  const handleMoreSipoc = () => {};
 
   return (
     <div className="mt-6 mx-6 w-full flex justify-center transition-all">
@@ -50,6 +50,13 @@ const Define = () => {
           groundwork for success. It&apos;s the crucial first step on your
           journey towards process enhancement.
         </p>
+
+        <Steps
+          step="ffkoe"
+          description="fiefjzfez"
+          placeholder="define"
+          showTag={true}
+        />
 
         <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
           <p className="h-full flex justify-center items-center py-2 px-5">
@@ -508,7 +515,10 @@ const Define = () => {
             </div>
           </div>
 
-          <button onClick={handleMoreSipoc} className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">
+          <button
+            onClick={handleMoreSipoc}
+            className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400"
+          >
             +Add more
           </button>
 
