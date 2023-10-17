@@ -36,6 +36,10 @@ const Define = () => {
     console.log(Object.fromEntries(data.entries()));
   };
 
+  const handleMoreSipoc = () => {
+    
+  }
+
   return (
     <div className="mt-6 mx-6 w-full flex justify-center transition-all">
       <div className="w-full xl:w-[90%]">
@@ -311,8 +315,8 @@ const Define = () => {
           </p>
 
           <div className="w-full flex">
-            <div className="grid grid-cols-1 gap-1 h-full max-sm:text-[7px] text-center max-md:text-[14px] mr-2 w-[10%]">
-              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+            <div className="grid grid-cols-1 gap-[2px] h-full max-sm:text-[7px] max-md:text-[14px] mr-1 w-[10%]">
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 px-1 py-2 shadow-md text-gray-600 font-bold text-center">
                 Steps
               </p>
               <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
@@ -334,7 +338,7 @@ const Define = () => {
                 6.
               </p>
             </div>
-            <div className="grid grid-cols-5 gap-1 w-[90%] h-full text-center max-sm:text-[7px] max-md:text-[14px]">
+            <div className="grid grid-cols-5 gap-[2px] w-[90%] h-full text-center max-sm:text-[7px] max-md:text-[14px]">
               <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
                 Supplier
               </div>
@@ -504,7 +508,7 @@ const Define = () => {
             </div>
           </div>
 
-          <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">
+          <button onClick={handleMoreSipoc} className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">
             +Add more
           </button>
 
