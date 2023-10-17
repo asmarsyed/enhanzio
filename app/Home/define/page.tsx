@@ -310,173 +310,198 @@ const Define = () => {
             high-level understanding.
           </p>
 
-          <div className="grid grid-cols-5 gap-1">
-            <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
-              Supplier
+          <div className="w-full flex">
+            <div className="grid grid-cols-1 gap-1 h-full max-sm:text-[7px] text-center max-md:text-[14px] mr-2 w-[10%]">
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                Steps
+              </p>
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                1.
+              </p>
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                2.
+              </p>
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                3.
+              </p>
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                4.
+              </p>
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                5.
+              </p>
+              <p className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                6.
+              </p>
             </div>
-            <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
-              Input
-            </div>
-            <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
-              Process
-            </div>
-            <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
-              Output
-            </div>
-            <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
-              Customer
-            </div>
+            <div className="grid grid-cols-5 gap-1 w-[90%] h-full text-center max-sm:text-[7px] max-md:text-[14px]">
+              <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                Supplier
+              </div>
+              <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                Input
+              </div>
+              <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                Process
+              </div>
+              <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                Output
+              </div>
+              <div className="w-full mt-4 border bg-gray-200 border-gray-400 p-2 shadow-md text-gray-600 font-bold text-center">
+                Customer
+              </div>
 
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
-            <input
-              className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-              type="text"
-              placeholder=""
-            />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+              <input
+                className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                type="text"
+                placeholder=""
+              />
+            </div>
           </div>
 
           <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">
