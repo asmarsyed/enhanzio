@@ -51,12 +51,12 @@ const Define = () => {
           journey towards process enhancement.
         </p>
 
-        <Steps
+        {/* <Steps
           step="ffkoe"
           description="fiefjzfez"
           placeholder="define"
           showTag={true}
-        />
+        /> */}
 
         <div className="flex justify-between w-full shadow-xl bg-white p-2 rounded-md mt-4">
           <p className="h-full flex justify-center items-center py-2 px-5">
