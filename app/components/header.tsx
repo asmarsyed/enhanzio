@@ -22,9 +22,9 @@ export default function Header() {
                     <Link href="" className="text-gray mr-4">
                         Demo
                     </Link>
-                    <Link href="/pricing" className="text-gray mr-4">
+                    {/* <Link href="/pricing" className="text-gray mr-4">
                         Pricing
-                    </Link>
+                    </Link> */}
                     <Link href="" className="text-gray mr-4">
                         Login
                     </Link>

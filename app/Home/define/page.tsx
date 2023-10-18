@@ -4,7 +4,6 @@ import React from "react";
 import { useState, useRef } from "react";
 import Link from "next/dist/client/link";
 import steps from "@/app/components/steps";
-import Steps from "@/app/components/steps";
 
 const Define = () => {
   const [expanded1, setExpanded1] = useState(1);

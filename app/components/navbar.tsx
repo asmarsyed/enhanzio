@@ -8,6 +8,7 @@ import React, {
   useContext,
 } from "react";
 import Link from "next/link";
+import Menunavbar from "./menunavbar";
 import { link } from "fs";
 
 export default function Navbar() {
@@ -83,260 +84,54 @@ export default function Navbar() {
           </div>
           <div className="border-t border-black/10 py-2"></div>
           <ul>
-            <Link href="/Home/planning">
-              <li
-                onClick={() => setActive("Planning")}
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex
-                ${
-                  active === "Planning"
-                    ? `${
-                        expanded
-                          ? "bg-gray-200 hover:bg-gray-300 transition-all"
-                          : "w-0 transition-all"
-                      }`
-                    : ""
-                } 
-                ${expanded ? "hover:bg-gray-100 " : "w-0"}`}
-              >
-                <div
-                  className={`px-2 py-1
-                  ${
-                    active === "Planning"
-                      ? `${
-                          expanded
-                            ? ""
-                            : "bg-gray-200 hover:bg-gray-300 transition-all "
-                        }`
-                      : ""
-                  } 
-                  ${
-                    expanded
-                      ? ""
-                      : "ease-in-out hover:bg-gray-100 text-white rounded-md transition-all "
-                  }`}
-                >
-                  <svg
-                    className={`m-2 w-[20px] h-[24px] text-gray-500 ${
-                      expanded ? "" : ""
-                    }`}
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 1v3m5-3v3m5-3v3M1 7h7m1.506 3.429 2.065 2.065M19 7h-2M2 3h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm6 13H6v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L8 16Z"
-                    />
-                  </svg>
-                </div>
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Planning
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
-            <Link href="/Home/dashboard">
-              <li
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
-                  expanded ? "hover:bg-gray-100 " : "w-0"
-                }`}
-              >
-                <div
-                  className={`px-2 py-1 ${
-                    expanded ? "" : "hover:bg-gray-100 rounded-md"
-                  }`}
-                >
-                  <svg
-                    className={`m-2 w-[20px] h-[24px] text-gray-500 ${
-                      expanded ? "" : ""
-                    }`}
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 18 16"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 1v14h16m0-9-3-2-3 5-3-2-3 4"
-                    />
-                  </svg>
-                </div>
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Dashboard
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
-            <Link href="/Home/kanban">
-              <li
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
-                  expanded ? "hover:bg-gray-100 " : "w-0"
-                }`}
-              >
-                <div
-                  className={`px-2 py-1 ${
-                    expanded ? "" : "hover:bg-gray-100 rounded-md"
-                  }`}
-                >
-                  <svg
-                    className={`m-2 w-[20px] h-[24px] text-gray-500 ${
-                      expanded ? "" : ""
-                    }`}
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 20 16"
-                  >
-                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3V0H2Zm16 0h-3v16h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 0H7v16h6V0Z" />
-                  </svg>
-                </div>
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Kanban
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
-            <Link href="/Home/define">
-              <li
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
-                  expanded ? "hover:bg-gray-100 " : "w-0"
-                }`}
-              >
-                <div
-                  className={`px-2 py-1 ${
-                    expanded ? "" : "hover:bg-gray-100 rounded-md"
-                  }`}
-                >
-                  <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
-                    D
-                  </p>
-                </div>
-                <img src="" alt="" />
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Define
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
-            <Link href="/Home/measure">
-              <li
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
-                  expanded ? "hover:bg-gray-100 " : "w-0"
-                }`}
-              >
-                <div
-                  className={`px-2 py-1 ${
-                    expanded ? "" : "hover:bg-gray-100 rounded-md"
-                  }`}
-                >
-                  <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
-                    M
-                  </p>
-                </div>
-                <img src="" alt="" />
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Measure
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
-            <Link href="/Home/analyze">
-              <li
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
-                  expanded ? "hover:bg-gray-100 " : "w-0"
-                }`}
-              >
-                <div
-                  className={`px-2 py-1 ${
-                    expanded ? "" : "hover:bg-gray-100 rounded-md"
-                  }`}
-                >
-                  <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
-                    A
-                  </p>
-                </div>
-                <img src="" alt="" />
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Analyze
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
-            <Link href="/Home/improve">
-              <li
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
-                  expanded ? "hover:bg-gray-100 " : "w-0"
-                }`}
-              >
-                <div
-                  className={`px-2 py-1 ${
-                    expanded ? "" : "hover:bg-gray-100 rounded-md"
-                  }`}
-                >
-                  <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
-                    I
-                  </p>
-                </div>
-                <img src="" alt="" />
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Improve
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
-            <Link href="/Home/control">
-              <li
-                className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
-                  expanded ? "hover:bg-gray-100 " : "w-0"
-                }`}
-              >
-                <div
-                  className={`px-2 py-1 ${
-                    expanded ? "" : "hover:bg-gray-100 rounded-md"
-                  }`}
-                >
-                  <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
-                    C
-                  </p>
-                </div>
-                <img src="" alt="" />
-                {expanded ? (
-                  <p className="flex justify-center items-center text-gray-500 ml-2">
-                    Control
-                  </p>
-                ) : (
-                  <p></p>
-                )}
-              </li>
-            </Link>
+            <Menunavbar
+              name="Planning"
+              link="/Home/planning"
+              expanded={expanded}
+              icon="Planning"
+            />
+            <Menunavbar
+              name="Dashboard"
+              link="/Home/dashboard"
+              expanded={expanded}
+              icon="Dashboard"
+            />
+            <Menunavbar
+              name="Kanban"
+              link="/Home/kanban"
+              expanded={expanded}
+              icon="Kanban"
+            />
+            <Menunavbar
+              name="Define"
+              link="/Home/define"
+              expanded={expanded}
+              icon="Define"
+            />
+            <Menunavbar
+              name="Measure"
+              link="/Home/measure"
+              expanded={expanded}
+              icon="Measure"
+            />
+            <Menunavbar
+              name="Analyze"
+              link="/Home/analyze"
+              expanded={expanded}
+              icon="Analyze"
+            />
+            <Menunavbar
+              name="Improve"
+              link="/Home/improve"
+              expanded={expanded}
+              icon="Improve"
+            />
+            <Menunavbar
+              name="Control"
+              link="/Home/control"
+              expanded={expanded}
+              icon="Control"
+            />
           </ul>
         </nav>
       </aside>
