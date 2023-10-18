@@ -6,26 +6,26 @@ import Link from "next/dist/client/link";
 import steps from "@/app/components/steps";
 
 const Define = () => {
-  const [expanded1, setExpanded1] = useState(1);
-  const [submit1, setSubmit1] = useState(1);
+  const [expanded1, setExpanded1] = useState(3);
+  const [submit1, setSubmit1] = useState(3);
 
-  const [expanded2, setExpanded2] = useState(1);
-  const [submit2, setSubmit2] = useState(1);
+  const [expanded2, setExpanded2] = useState(3);
+  const [submit2, setSubmit2] = useState(3);
 
-  const [expanded3, setExpanded3] = useState(1);
-  const [submit3, setSubmit3] = useState(1);
+  const [expanded3, setExpanded3] = useState(3);
+  const [submit3, setSubmit3] = useState(3);
 
-  const [expanded4, setExpanded4] = useState(1);
-  const [submit4, setSubmit4] = useState(1);
+  const [expanded4, setExpanded4] = useState(3);
+  const [submit4, setSubmit4] = useState(3);
 
-  const [expanded5, setExpanded5] = useState(1);
-  const [submit5, setSubmit5] = useState(1);
+  const [expanded5, setExpanded5] = useState(3);
+  const [submit5, setSubmit5] = useState(3);
 
-  const [expanded6, setExpanded6] = useState(1);
-  const [submit6, setSubmit6] = useState(1);
+  const [expanded6, setExpanded6] = useState(3);
+  const [submit6, setSubmit6] = useState(3);
 
-  const [expanded7, setExpanded7] = useState(1);
-  const [submit7, setSubmit7] = useState(1);
+  const [expanded7, setExpanded7] = useState(3);
+  const [submit7, setSubmit7] = useState(3);
 
   const reponseRef = useRef();
 
@@ -37,7 +37,13 @@ const Define = () => {
     console.log(Object.fromEntries(data.entries()));
   };
 
-  const handleMoreSipoc = () => {};
+  const [moresipoc, setMoresipoc] = useState([
+    { s: "", i: "", p: "", o: "", c: "" },
+  ]);
+
+  const handleMoreSipoc = () => {
+    setMoresipoc([...moresipoc, { s: "", i: "", p: "", o: "", c: "" }]);
+  };
 
   return (
     <div className="mt-6 mx-6 w-full flex justify-center transition-all">
@@ -511,6 +517,34 @@ const Define = () => {
                 type="text"
                 placeholder=""
               />
+              {moresipoc.map((val, i) => (
+                <><input
+                  name="s"
+                  value={val.s}
+                  className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                  type="text"
+                  placeholder="" /><input
+                    name="i"
+                    value={val.i}
+                    className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                    type="text"
+                    placeholder="" /><input
+                    name="p"
+                    value={val.p}
+                    className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                    type="text"
+                    placeholder="" /><input
+                    name="o"
+                    value={val.o}
+                    className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                    type="text"
+                    placeholder="" /><input
+                    name="c"
+                    value={val.c}
+                    className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
+                    type="text"
+                    placeholder="" /></>
+              ))}
             </div>
           </div>
 
