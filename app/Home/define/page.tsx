@@ -4,9 +4,7 @@ import React from "react";
 import { useState, useRef } from "react";
 import Link from "next/dist/client/link";
 import steps from "@/app/components/steps";
-import Sipocinputs from "@/app/components/define/Sipocinputs";
-import Sipocname from "@/app/components/define/Sipocname";
-import Sipocnumber from "@/app/components/define/Sipocnumber";
+import Sipoc from "@/app/components/define/SIPOC/Sipoc";
 
 const Define = () => {
   const [expanded1, setExpanded1] = useState(3);
@@ -39,33 +37,6 @@ const Define = () => {
     const data = new FormData(e.target);
     console.log(Object.fromEntries(data.entries()));
   };
-
-  const [moresipoc, setMoresipoc] = useState([
-    { s: "", i: "", p: "", o: "", c: "" },
-  ]);
-
-  const [moresipocnumber, setMoresipocnumber] = useState([{}]);
-
-  const [sipocnumber, setSipocnumber] = useState(6);
-
-  const handleMoreSipoc = () => {
-    setMoresipoc([...moresipoc, { s: "", i: "", p: "", o: "", c: "" }]);
-  };
-  const handleMoreSipocnumber = () => {
-    setMoresipocnumber([...moresipocnumber, {}]);
-    setSipocnumber(sipocnumber + 1);
-  };
-
-  const numInputs = 25; // Le nombre d'éléments <input> que vous souhaitez générer
-
-  const inputElements = Array.from({ length: numInputs }, (_, index) => (
-    <input
-      key={index}
-      className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-      type="text"
-      placeholder=""
-    />
-  ));
 
   return (
     <div className="mt-6 mx-6 w-full flex justify-center transition-all">
@@ -348,69 +319,7 @@ const Define = () => {
             high-level understanding.
           </p>
 
-          <div className="w-full flex">
-            <div className="grid grid-cols-1 gap-[2px] h-full max-sm:text-[7px] max-md:text-[14px] mr-1 w-[10%]">
-              <p className="w-full mt-4 border bg-gray-200 border-gray-400 px-1 py-2 shadow-md text-gray-600 font-bold text-center">
-                Steps
-              </p>
-              <Sipocnumber number="1" />
-              <Sipocnumber number="2" />
-              <Sipocnumber number="3" />
-              <Sipocnumber number="4" />
-              <Sipocnumber number="5" />
-
-              {moresipocnumber.map(() => (
-                <>
-                  <Sipocnumber number={sipocnumber} />
-                </>
-              ))}
-            </div>
-            <div className="grid grid-cols-5 gap-[2px] w-[90%] h-full text-center max-sm:text-[7px] max-md:text-[14px]">
-              <Sipocname nom="Supplier" />
-              <Sipocname nom="Input" />
-              <Sipocname nom="Process" />
-              <Sipocname nom="Output" />
-              <Sipocname nom="Customer" />
-
-              {inputElements}
-
-              {moresipoc.map(() => (
-                <>
-                  <Sipocinputs name="s" />
-                  <Sipocinputs name="i" />
-                  <Sipocinputs name="p" />
-                  <Sipocinputs name="o" />
-                  <Sipocinputs name="c" />
-                </>
-              ))}
-            </div>
-          </div>
-
-          <button
-            onClick={() => {
-              handleMoreSipoc();
-              handleMoreSipocnumber();
-            }}
-            className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400"
-          >
-            +Add more
-          </button>
-
-          <p className="text-gray-500 mt-4">
-            Define now the scope of the project
-          </p>
-
-          <input
-            className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-            type="text"
-            placeholder="In Scope"
-          />
-
-          <input
-            className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-            type="text"
-            placeholder="Out Scope"
-          />
+          <Sipoc />
 
           <button
             onClick={() => {
