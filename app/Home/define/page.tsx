@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import Link from "next/dist/client/link";
 import steps from "@/app/components/steps";
 import Sipoc from "@/app/components/define/SIPOC/Sipoc";
+import Budget from "@/app/components/Businesscase/budget";
 
 const Define = () => {
   const [expanded1, setExpanded1] = useState(3);
@@ -390,21 +391,7 @@ const Define = () => {
             impact and feasibility.
           </p>
 
-          <input
-            className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-            type="text"
-            placeholder="Budget"
-          />
-
-          <input
-            className="w-full mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
-            type="text"
-            placeholder="Savings"
-          />
-
-          <button className="transition-all ease-in-out mt-4 border w-full bg-gray-300 text-gray-600 rounded-xl p-2 hover:bg-gray-400">
-            +Add more
-          </button>
+          <Budget />
 
           <button
             onClick={() => {
