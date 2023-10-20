@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const budget = () => {
+const Budget = () => {
   const [numInputs, setNumInputs] = useState([{}]);
 
   const handleAddmore = (numInput: any) => {
@@ -40,4 +40,4 @@ const budget = () => {
   );
 };
 
-export default budget;
+export default Budget;
