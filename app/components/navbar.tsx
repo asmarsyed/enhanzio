@@ -17,7 +17,7 @@ export default function Navbar() {
   const [active, setActive] = useState("");
 
   return (
-    <div className="flex max-md:hidden">
+    <div className="flex bg-white drop-shadow-2xl max-md:hidden ">
       <div
         className={`h-screen ${
           expanded

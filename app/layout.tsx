@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Lato } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Header from "./components/header";
@@ -9,6 +10,11 @@ import { Analytics } from "@vercel/analytics/react";
 import Home from "./page";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: "100",
+});
 
 export const metadata: Metadata = {
   title: "Enhanzio",
@@ -25,10 +31,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/Logo Enhanzio.png" />
       </head>
-      <body className="bg-white">
-        {children}
-        <Analytics />
-      </body>
+      <main>
+        <body className="bg-white">
+          {children}
+          <Analytics />
+        </body>
+      </main>
     </html>
   );
 }
