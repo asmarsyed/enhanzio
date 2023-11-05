@@ -78,23 +78,23 @@ const Menunavbar: React.FC<MenunavbarProps> = ({
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3V0H2Zm16 0h-3v16h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 0H7v16h6V0Z" />
               </svg>
             ) : icon === "Define" ? (
-              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[29px]">
                 D
               </p>
             ) : icon === "Measure" ? (
-              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[29px]">
                 M
               </p>
             ) : icon === "Analyze" ? (
-              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[29px]">
                 A
               </p>
             ) : icon === "Improve" ? (
-              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[29px]">
                 I
               </p>
             ) : icon === "Control" ? (
-              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[29px]">
                 C
               </p>
             ) : (

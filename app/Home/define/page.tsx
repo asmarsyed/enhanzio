@@ -107,10 +107,121 @@ const Define = () => {
                   Now define the problem briefly :
                 </p>
                 <div className="h-full">
+                  <textarea className="w-full h-[80%] p-2 rounded-md align-top border" />
+                </div>
+              </div>
+            </div>
+          </Steps>
+          <Steps stepname="Project scope">
+            <div className="w-full mt-4">
+              <div className="w-full flex justify-end mb-4">
+                <p className="mr-4">In scope</p>
+                <input
+                  className="w-[90%] flex items-center p-2 rounded-md border h-[34px]"
+                  type="text"
+                />
+              </div>
+              <div className="w-full flex justify-end">
+                <p className="mr-4">Out scope</p>
+                <input
+                  className="w-[90%] flex items-center p-2 rounded-md border h-[34px]"
+                  type="text"
+                />
+              </div>
+            </div>
+          </Steps>
+          <Steps stepname="Project Goal">
+            <div className="flex w-full h-full">
+              <div className="w-1/2 mr-[45px]">
+                <p className="mb-4 mt-2 text-[18px]">
+                  Defining the problem with the SMART method
+                </p>
+                <div className="flex justify-end items-center flex-auto mb-4">
+                  <p className="mr-2 text-[18px]">Specific</p>
                   <input
-                    className="w-full h-[80%] p-2 rounded-md align-text-top"
+                    className="h-[34px] w-[75%] flex items-center p-2 rounded-md border"
                     type="text"
-                    placeholder="ff"
+                  />
+                </div>
+                <div className="flex justify-end items-center flex-auto mb-4">
+                  <p className="mr-2 text-[18px]">Measurable</p>
+                  <input
+                    className="h-[34px] w-[75%] flex items-center p-2 rounded-md border"
+                    type="text"
+                  />
+                </div>
+                <div className="flex justify-end items-center flex-auto mb-4">
+                  <p className="mr-2 text-[18px]">Achievable</p>
+                  <input
+                    className="h-[34px] w-[75%] flex items-center p-2 rounded-md border"
+                    type="text"
+                  />
+                </div>
+                <div className="flex justify-end items-center flex-auto mb-4">
+                  <p className="mr-2 text-[18px]">Relevant</p>
+                  <input
+                    className="h-[34px] w-[75%] flex items-center p-2 rounded-md border"
+                    type="text"
+                  />
+                </div>
+                <div className="flex justify-end items-center flex-auto mb-4">
+                  <p className="mr-2 text-[18px]">Time-based</p>
+                  <input
+                    className="h-[34px] w-[75%] flex items-center p-2 rounded-md border"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="w-1/2">
+                <p className="text-[18px] mt-2 mb-4">
+                  Now define the problem briefly :
+                </p>
+                <div className="h-full">
+                  <textarea className="w-full h-[75%] p-2 rounded-md align-top border" />
+                </div>
+              </div>
+            </div>
+          </Steps>
+          <Steps stepname="Business case">
+            <div className="flex h-full w-full">
+              <div className="w-1/3">
+                <p className="h-1/3 flex  items-center border-b border-slate-300 mb-2">
+                  Gain
+                </p>
+                <p className="h-1/3 flex items-center mb-2">Budget</p>
+                <p className="h-1/3 flex items-center ">Savings</p>
+              </div>
+              <div className="w-1/3">
+                <p className="h-1/3 flex items-center mb-2 border-b border-slate-300">
+                  Current value
+                </p>
+                <div className="h-1/3 flex mr-2 items-center mb-2">
+                  <input
+                    className="h-[34px] w-full flex items-center p-2 rounded-md border"
+                    type="text"
+                  />
+                </div>
+                <div className="h-1/3 flex mr-2 items-center mb-2">
+                  <input
+                    className="h-[34px] w-full flex items-center p-2 rounded-md border"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="w-1/3">
+                <p className="h-1/3 flex items-center mb-2 border-b border-slate-300">
+                  Target value
+                </p>
+                <div className="h-1/3 flex items-center mb-2">
+                  <input
+                    className="h-[34px] w-full flex items-center p-2 rounded-md border"
+                    type="text"
+                  />
+                </div>
+                <div className="h-1/3 flex items-center mb-2">
+                  <input
+                    className="h-[34px] w-full flex items-center p-2 rounded-md border"
+                    type="text"
                   />
                 </div>
               </div>
