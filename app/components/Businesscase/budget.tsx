@@ -37,7 +37,7 @@ const Budget = () => {
         />
       </div>
       {numInputs.map((_, index) => (
-        <div className="flex">
+        <div key={index} className="flex">
           <input
             key={index}
             className="w-[35%] mt-4 border border-gray-400 rounded-sm p-2 shadow-md"
