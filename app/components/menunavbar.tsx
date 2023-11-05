@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -8,14 +10,14 @@ interface MenunavbarProps {
   icon: any;
 }
 
-const Manunavbar: React.FC<MenunavbarProps> = ({
+const Menunavbar: React.FC<MenunavbarProps> = ({
   name,
   link,
   expanded,
   icon,
 }) => {
   return (
-    <div>
+    <div className="w-[300px] h-[65px]">
       <Link href={link}>
         <li
           className={`pl-2 rounded-md ml-2 mr-2 mb-2 flex ${
@@ -29,7 +31,7 @@ const Manunavbar: React.FC<MenunavbarProps> = ({
           >
             {icon === "Planning" ? (
               <svg
-                className={`m-2 w-[20px] h-[24px] text-gray-500 ${
+                className={`my-2 mr-4 ml-4 w-[27px] h-[27px] text-gray-500 ${
                   expanded ? "" : ""
                 }`}
                 aria-hidden="true"
@@ -47,7 +49,7 @@ const Manunavbar: React.FC<MenunavbarProps> = ({
               </svg>
             ) : icon === "Dashboard" ? (
               <svg
-                className={`m-2 w-[20px] h-[24px] text-gray-500 ${
+                className={`my-2 mr-4 ml-4 w-[27px] h-[27px] text-gray-500 ${
                   expanded ? "" : ""
                 }`}
                 aria-hidden="true"
@@ -65,7 +67,7 @@ const Manunavbar: React.FC<MenunavbarProps> = ({
               </svg>
             ) : icon === "Kanban" ? (
               <svg
-                className={`m-2 w-[20px] h-[24px] text-gray-500 ${
+                className={`my-2 mr-4 ml-4 w-[27px] h-[27px] text-gray-500 ${
                   expanded ? "" : ""
                 }`}
                 aria-hidden="true"
@@ -76,23 +78,23 @@ const Manunavbar: React.FC<MenunavbarProps> = ({
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3V0H2Zm16 0h-3v16h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 0H7v16h6V0Z" />
               </svg>
             ) : icon === "Define" ? (
-              <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
                 D
               </p>
             ) : icon === "Measure" ? (
-              <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
                 M
               </p>
             ) : icon === "Analyze" ? (
-              <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
                 A
               </p>
             ) : icon === "Improve" ? (
-              <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
                 I
               </p>
             ) : icon === "Control" ? (
-              <p className="flex w-5 h-6 m-2 font-bold text-gray-500 float-left text-center text-xl justify-center items-center">
+              <p className="flex w-[27px] h-[27px] my-2 mr-4 ml-4 font-bold text-gray-500 float-left text-center text-xl justify-center items-center text-[28px]">
                 C
               </p>
             ) : (
@@ -101,7 +103,7 @@ const Manunavbar: React.FC<MenunavbarProps> = ({
           </div>
           <img src="" alt="" />
           {expanded ? (
-            <p className="flex justify-center items-center text-gray-500 ml-2">
+            <p className="flex justify-center items-center text-[20px] text-gray-500 ml-2">
               {name}
             </p>
           ) : (
@@ -113,4 +115,4 @@ const Manunavbar: React.FC<MenunavbarProps> = ({
   );
 };
 
-export default Manunavbar;
+export default Menunavbar;

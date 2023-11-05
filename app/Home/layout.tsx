@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Home from "./page";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Footer from "../components/landingpage/footer";
+import Headerphase from "../components/headerphase";
 
 export default function RootLayout({
   children,
@@ -13,8 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className="bg-white">
+      <body className="bg-[#F3F7FC]">
         <main className="flex">
+          <Headerphase />
           <Navbar />
           {children}
         </main>

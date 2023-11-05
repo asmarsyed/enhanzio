@@ -11,74 +11,77 @@ import Link from "next/link";
 import Menunavbar from "./menunavbar";
 import { link } from "fs";
 
-export default function Navbar() {
+const Navbar = () => {
   const [expanded, setExpanded] = useState(true);
 
   const [active, setActive] = useState("");
 
   return (
-    <div className="flex bg-white drop-shadow-2xl max-md:hidden ">
+    <div className="flex bg-white shadow-2xl border-r max-md:hidden ">
       <div
         className={`h-screen ${
           expanded
-            ? "w-[222px] transition-all ease-in-out"
-            : "w-[86px] transition-all ease-in-out"
+            ? "w-[300px] transition-all ease-in-out"
+            : "w-[105px] transition-all ease-in-out"
         }`}
       ></div>
 
-      <aside
-        className={`fixed h-screen border-r border-gray-200 ${
+      <div
+        className={`fixed h-screen ${
           expanded
-            ? "w-[222px] transition-all ease-in-out"
-            : "w-[86px] transition-all ease-in-out"
+            ? "fixed w-[300px] transition-all ease-in-out"
+            : "fixed w-[105px] transition-all ease-in-out"
         }`}
       >
         <nav>
-          <div className="p-4 pb-2 flex justify-between items-center mb-2 h-14">
-            {expanded ? (
-              <Link href="/">
-                <img
-                  className="ml-2 h-9"
-                  src="/Enhanzio.png"
-                  alt="Logo Enhanzio"
-                />
-              </Link>
-            ) : (
-              <p className="h-6"></p>
-            )}
-            <button onClick={() => setExpanded((curr) => !curr)}>
+          <div className="p-4 pb-2 flex items-center mb-2 h-[82px]">
+            <button
+              className="flex items-center justify-center w-full"
+              onClick={() => setExpanded((curr) => !curr)}
+            >
               {expanded ? (
                 <svg
-                  className="w-4 h-4 text-gray-700"
+                  className="absolute left-[42px] w-[24px] h-[24px] text-gray-700"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 8 14"
+                  viewBox="0 0 17 14"
                 >
                   <path
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
+                    d="M1 1h15M1 7h15M1 13h15"
                   />
                 </svg>
               ) : (
                 <svg
-                  className="w-4 h-4 text-gray-700 mr-5"
+                  className="fixed left-[42px] w-[24px] h-[24px] text-gray-700"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 8 14"
+                  viewBox="0 0 17 14"
                 >
                   <path
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                    d="M1 1h15M1 7h15M1 13h15"
                   />
                 </svg>
+              )}
+              {expanded ? (
+                <Link href="/">
+                  <img
+                    className="ml-12 h-[40px]"
+                    src="/Enhanzio.png"
+                    alt="Logo Enhanzio"
+                  />
+                </Link>
+              ) : (
+                <p className="h-6"></p>
               )}
             </button>
           </div>
@@ -134,7 +137,9 @@ export default function Navbar() {
             />
           </ul>
         </nav>
-      </aside>
+      </div>
     </div>
   );
-}
+};
+
+export default Navbar;

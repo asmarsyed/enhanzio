@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Lato } from "next/font/google";
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import Footer from "./components/landingpage/footer";
+import Header from "./components/landingpage/header";
 import { Analytics } from "@vercel/analytics/react";
 
 import Home from "./page";
@@ -31,11 +31,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/Logo Enhanzio.png" />
       </head>
-      <main>
-        <body className="bg-white">
-          {children}
-          <Analytics />
-        </body>
+      <main className="bg-white">
+        {children}
+        <Analytics />
       </main>
     </html>
   );
