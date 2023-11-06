@@ -9,7 +9,6 @@ import React, {
 } from "react";
 import Link from "next/link";
 import Menunavbar from "./menunavbar";
-import { link } from "fs";
 
 const Navbar = () => {
   const [expanded, setExpanded] = useState(true);
