@@ -595,7 +595,7 @@ const Define = () => {
               </div>
               <div>
                 <p>Start date</p>
-                
+
               </div>
             </div>
           </Steps>
