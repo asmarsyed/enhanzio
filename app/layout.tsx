@@ -6,6 +6,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/landingpage/footer";
 import Header from "./components/landingpage/header";
 import { Analytics } from "@vercel/analytics/react";
+import {NextUIProvider} from "@nextui-org/react";
 
 import Home from "./page";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <NextUIProvider>
     <html lang="en">
       <head>
         <link rel="icon" href="/Logo Enhanzio.png" />
@@ -36,5 +38,6 @@ export default function RootLayout({
         <Analytics />
       </main>
     </html>
+    </NextUIProvider>
   );
 }
