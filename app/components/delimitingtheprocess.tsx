@@ -1,5 +1,6 @@
 import React from "react";
 import Steps from "./steps";
+import Table from "./table";
 
 const delimitingtheprocess = () => {
   return (
@@ -12,7 +13,9 @@ const delimitingtheprocess = () => {
           improvement, breaking down a process into key components for a
           high-level understanding.
         </p>
-        <div></div>
+        <div>
+          <Table />
+        </div>
       </Steps>
     </div>
   );
