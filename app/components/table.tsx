@@ -1,17 +1,30 @@
 import React from "react";
 import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
 
 const table = () => {
   return (
     <div>
+      <Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+      <DialogDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </DialogDescription>
+    </DialogHeader>
+  </DialogContent>
+</Dialog>
+
       <div className="bg-[white] rounded-md mt-4 border">
         <table className="w-full">
           <thead className="bg-[#F3F7FC]">
@@ -60,6 +73,12 @@ const table = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div className="w-full flex justify-center mt-2">
+        <button className="bg-white rounded-md py-2 px-4 border">
+          Add row
+        </button>
       </div>
 
       {/* <section className="mt-6 container px-4 mx-auto">
