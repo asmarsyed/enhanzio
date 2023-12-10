@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
-const table = () => {
+const Table = () => {
   const [rowlist, setRowlist] = useState([
     { name: "Name", role: "Project manager", time: "120" },
     { name: "Name", role: "Project sponsor", time: "30" },
@@ -761,4 +761,4 @@ const table = () => {
   );
 };
 
-export default table;
+export default Table;

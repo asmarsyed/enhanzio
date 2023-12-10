@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Steps from "@/app/components/steps";
 import { DatePickerWithRange } from "./datepicker";
 
-const definingtheproblem = () => {
+const Definingtheproblem = () => {
   const [inputList, setInputList] = useState([
     { Gain: "", Currentvalue: "", Targetvalue: "" },
   ]);
@@ -565,4 +565,4 @@ const definingtheproblem = () => {
   );
 };
 
-export default definingtheproblem;
+export default Definingtheproblem;
