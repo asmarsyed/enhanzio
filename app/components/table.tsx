@@ -117,7 +117,7 @@ const Table = () => {
             </tr>
           </tbody>
           {rowmap.map((_, index) => (
-            <tbody>
+            <tbody key={index}>
               <tr>
                 <td className="w-1/4 border-b  py-3 px-6">Tom Hanks</td>
                 <td className="w-1/4 border-b">Manager</td>
