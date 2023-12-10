@@ -81,8 +81,8 @@ const table = () => {
                           Edit row
                         </DialogTitle>
                         <DialogDescription>
-                          Make changes to the row here. Click save when you're
-                          done.
+                          Make changes to the row here. Click save when
+                          you&apos;re done.
                         </DialogDescription>
                       </DialogHeader>
                       <div className="grid gap-4 py-4">
@@ -161,8 +161,8 @@ const table = () => {
                             Edit row
                           </DialogTitle>
                           <DialogDescription>
-                            Make changes to the row here. Click save when you're
-                            done.
+                            Make changes to the row here. Click save when
+                            you&apos;re done.
                           </DialogDescription>
                         </DialogHeader>
                         <div className="grid gap-4 py-4">
