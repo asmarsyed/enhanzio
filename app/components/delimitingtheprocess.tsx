@@ -7,12 +7,13 @@ const delimitingtheprocess = () => {
     <div>
       <Steps stepname="Delimiting the process">
         <p>
-          The second step involves using the SIPOC tool, which stands for
-          “Supplier, Input, Process, Output, Customer” to define the project's
-          scope. SIPOC is a visual framework commonly used in process
-          improvement, breaking down a process into key components for a
-          high-level understanding.
+          Le deuxième pas implique l&apos;utilisation de l&apos;outil SIPOC, qui
+          signifie &quot;Supplier, Input, Process, Output, Customer&quot; pour
+          définir la portée du projet. SIPOC est un cadre visuel couramment
+          utilisé dans l&apos;amélioration des processus, décomposant un
+          processus en composants clés pour une compréhension globale.
         </p>
+
         <div>
           <Table />
         </div>

@@ -1,30 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 const table = () => {
+  const [rowlist, setRowlist] = useState([
+    { name: "Name", role: "Project manager", time: "120" },
+    { name: "Name", role: "Project sponsor", time: "30" },
+    { name: "Name", role: "Stakeholders", time: "90" },
+  ]);
+
+  const [rowmap, setRowmap] = useState([
+    { name: "Name", role: "Manager", time: "" },
+  ]);
+
+  const handleAddRow = () => {
+    setRowlist([...rowmap, { name: "", role: "", time: "" }]);
+  };
+
   return (
     <div>
-      <Dialog>
-  <DialogTrigger>Open</DialogTrigger>
-  <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Are you sure absolutely sure?</DialogTitle>
-      <DialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </DialogDescription>
-    </DialogHeader>
-  </DialogContent>
-</Dialog>
-
       <div className="bg-[white] rounded-md mt-4 border">
         <table className="w-full">
           <thead className="bg-[#F3F7FC]">
@@ -35,9 +39,9 @@ const table = () => {
           </thead>
           <tbody>
             <tr>
-              <td className="w-1/4 border-b  py-3 px-6">Tom Hanks</td>
-              <td className="w-1/4 border-b  ">Manager</td>
-              <td className="w-1/4 border-b  ">120 h</td>
+              <td className="w-1/4 border-b  py-3 px-6">{rowlist[0].name}</td>
+              <td className="w-1/4 border-b">{rowlist[0].role}</td>
+              <td className="w-1/4 border-b">{rowlist[0].time}</td>
               <td className="w-1/4 border-b">
                 <div className="flex mr-4">
                   <svg
@@ -54,31 +58,155 @@ const table = () => {
                       d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
                     ></path>
                   </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="w-5 h-5"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-                    ></path>
-                  </svg>
+                  <Dialog>
+                    <DialogTrigger>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                        ></path>
+                      </svg>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[425px]">
+                      <DialogHeader>
+                        <DialogTitle className="text-[#001F3E]">
+                          Edit row
+                        </DialogTitle>
+                        <DialogDescription>
+                          Make changes to the row here. Click save when you're
+                          done.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid gap-4 py-4">
+                        <div className="grid grid-cols-4 items-center gap-4">
+                          <Label htmlFor="name" className="text-right">
+                            Name
+                          </Label>
+                          <Input id="name" className="col-span-3" />
+                        </div>
+                        <div className="grid grid-cols-4 items-center gap-4">
+                          <Label htmlFor="username" className="text-right">
+                            Role
+                          </Label>
+                          <Input id="username" className="col-span-3" />
+                        </div>
+                        <div className="grid grid-cols-4 items-center gap-4">
+                          <Label htmlFor="username" className="text-right">
+                            Estimated time on the project
+                          </Label>
+                          <Input id="username" className="col-span-3" />
+                        </div>
+                      </div>
+                      <DialogFooter>
+                        <Button className="bg-[#001F3E]" type="submit">
+                          Save changes
+                        </Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </td>
             </tr>
           </tbody>
+          {rowmap.map((_, index) => (
+            <tbody>
+              <tr>
+                <td className="w-1/4 border-b  py-3 px-6">Tom Hanks</td>
+                <td className="w-1/4 border-b">Manager</td>
+                <td className="w-1/4 border-b">120 h</td>
+                <td className="w-1/4 border-b">
+                  <div className="flex mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      className="w-5 h-5 mr-2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                      ></path>
+                    </svg>
+                    <Dialog>
+                      <DialogTrigger>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-5 h-5"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                          ></path>
+                        </svg>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[425px]">
+                        <DialogHeader>
+                          <DialogTitle className="text-[#001F3E]">
+                            Edit row
+                          </DialogTitle>
+                          <DialogDescription>
+                            Make changes to the row here. Click save when you're
+                            done.
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="grid gap-4 py-4">
+                          <div className="grid grid-cols-4 items-center gap-4">
+                            <Label htmlFor="name" className="text-right">
+                              Name
+                            </Label>
+                            <Input id="name" className="col-span-3" />
+                          </div>
+                          <div className="grid grid-cols-4 items-center gap-4">
+                            <Label htmlFor="username" className="text-right">
+                              Role
+                            </Label>
+                            <Input id="username" className="col-span-3" />
+                          </div>
+                          <div className="grid grid-cols-4 items-center gap-4">
+                            <Label htmlFor="username" className="text-right">
+                              Estimated time on the project
+                            </Label>
+                            <Input id="username" className="col-span-3" />
+                          </div>
+                        </div>
+                        <DialogFooter>
+                          <Button className="bg-[#001F3E]" type="submit">
+                            Save changes
+                          </Button>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          ))}
         </table>
       </div>
 
       <div className="w-full flex justify-center mt-2">
-        <button className="bg-white rounded-md py-2 px-4 border">
+        <Button
+          onClick={handleAddRow}
+          className="bg-[#001F3E] text-white rounded-md py-2 px-4 border"
+        >
           Add row
-        </button>
+        </Button>
       </div>
 
       {/* <section className="mt-6 container px-4 mx-auto">
