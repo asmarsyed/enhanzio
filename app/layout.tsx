@@ -31,10 +31,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/Logo Enhanzio.png" />
       </head>
-      <main className="bg-white">
+      <body className="bg-white">
         {children}
         <Analytics />
-      </main>
+      </body>
     </html>
   );
 }
